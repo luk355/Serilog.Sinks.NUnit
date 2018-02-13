@@ -1,27 +1,26 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Serilog.Sinks.NUnit", "src\Serilog.Sinks.NUnit\Serilog.Sinks.NUnit.xproj", "{0479B6F0-6478-42D5-9BCF-D52094FACD33}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4E106ADB-6C85-4003-944E-54908DAB951A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9D1B13F3-2654-4DEF-818B-7A06D7EE6402}"
 	ProjectSection(SolutionItems) = preProject
 		appveyor.yml = appveyor.yml
 		Build.ps1 = Build.ps1
-		global.json = global.json
 		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{18BB7FA4-728C-48B3-8E16-CEF3BBB706CC}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Serilog.Sinks.NUnit.Tests", "test\Serilog.Sinks.NUnit.Tests\Serilog.Sinks.NUnit.Tests.xproj", "{9929C5E6-1B30-4E61-8416-1E89F3E54353}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{4EBD2283-B993-4DB8-8D7B-AA8261164CAB}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Serilog.Sinks.NUnit.Sample.NetCore", "samples\Serilog.Sinks.NUnit.Sample.NetCore\Serilog.Sinks.NUnit.Sample.NetCore.xproj", "{EB26533C-FCB7-4B4F-8A1F-29784473C614}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Serilog.Sinks.NUnit", "src\Serilog.Sinks.NUnit\Serilog.Sinks.NUnit.csproj", "{0479B6F0-6478-42D5-9BCF-D52094FACD33}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Serilog.Sinks.NUnit.Tests", "test\Serilog.Sinks.NUnit.Tests\Serilog.Sinks.NUnit.Tests.csproj", "{9929C5E6-1B30-4E61-8416-1E89F3E54353}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Serilog.Sinks.NUnit.Sample.NetCore", "samples\Serilog.Sinks.NUnit.Sample.NetCore\Serilog.Sinks.NUnit.Sample.NetCore.csproj", "{EB26533C-FCB7-4B4F-8A1F-29784473C614}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Serilog.Sinks.NUnit.Sample", "samples\Serilog.Sinks.NUnit.Sample\Serilog.Sinks.NUnit.Sample.csproj", "{E21F1FC8-981F-44D6-AD7D-A85236CE1D46}"
 EndProject
@@ -56,5 +55,8 @@ Global
 		{9929C5E6-1B30-4E61-8416-1E89F3E54353} = {18BB7FA4-728C-48B3-8E16-CEF3BBB706CC}
 		{EB26533C-FCB7-4B4F-8A1F-29784473C614} = {4EBD2283-B993-4DB8-8D7B-AA8261164CAB}
 		{E21F1FC8-981F-44D6-AD7D-A85236CE1D46} = {4EBD2283-B993-4DB8-8D7B-AA8261164CAB}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AE7B6E2F-C066-41B3-AA51-61D11C2FCE94}
 	EndGlobalSection
 EndGlobal
