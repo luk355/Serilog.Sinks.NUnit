@@ -24,11 +24,19 @@ function Exec
 
 if(Test-Path .\artifacts) { Remove-Item .\artifacts -Force -Recurse }
 
-
 exec { & dotnet restore }
-exec { & dotnet build }
 
-$revision = @{ $true = $env:APPVEYOR_BUILD_NUMBER; $false = 1 }[$env:APPVEYOR_BUILD_NUMBER -ne $NULL];
-$revision = "{0:D4}" -f [convert]::ToInt32($revision, 10)
+# inspired by https://github.com/jbogard/MediatR/blob/master/Build.ps1
+$branch = @{ $true = $env:APPVEYOR_REPO_BRANCH; $false = $(git symbolic-ref --short -q HEAD) }[$env:APPVEYOR_REPO_BRANCH -ne $NULL];
+$revision = @{ $true = "{0:00000}" -f [convert]::ToInt32("0" + $env:APPVEYOR_BUILD_NUMBER, 10); $false = "local" }[$env:APPVEYOR_BUILD_NUMBER -ne $NULL];
+$suffix = @{ $true = ""; $false = "$($branch.Substring(0, [math]::Min(10,$branch.Length)))-$revision"}[$branch -eq "master" -and $revision -ne "local"]
+$commitHash = $(git rev-parse --short HEAD)
+$buildSuffix = @{ $true = "$($suffix)-$($commitHash)"; $false = "$($branch)-$($commitHash)" }[$suffix -ne ""]
+$versionSuffix = @{ $true = "--version-suffix=$($suffix)"; $false = ""}[$suffix -ne ""]
 
-exec { & dotnet pack .\src\Serilog.Sinks.NUnit -c Release -o .\artifacts --version-suffix=$revision /p:NoPackageAnalysis=true} 
+echo "build: Package version suffix is $suffix"
+echo "build: Build version suffix is $buildSuffix" 
+
+exec { & dotnet build Serilog.Sinks.NUnit.sln -c Release --version-suffix=$buildSuffix -v q /nologo }
+
+exec { & dotnet pack .\src\Serilog.Sinks.NUnit -c Release -o .\artifacts --include-symbols --no-build $versionSuffix} 
