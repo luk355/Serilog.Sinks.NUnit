@@ -34,9 +34,15 @@ $commitHash = $(git rev-parse --short HEAD)
 $buildSuffix = @{ $true = "$($suffix)-$($commitHash)"; $false = "$($branch)-$($commitHash)" }[$suffix -ne ""]
 $versionSuffix = @{ $true = "--version-suffix=$($suffix)"; $false = ""}[$suffix -ne ""]
 
+echo "==========================" 
 echo "build: Package version suffix is $suffix"
 echo "build: Build version suffix is $buildSuffix" 
+echo "==========================" 
 
 exec { & dotnet build Serilog.Sinks.NUnit.sln -c Release --version-suffix=$buildSuffix -v q /nologo }
+
+echo "==========================" 
+echo "Build completed -> packing" 
+echo "==========================" 
 
 exec { & dotnet pack .\src\Serilog.Sinks.NUnit -c Release -o .\artifacts --include-symbols --no-build $versionSuffix} 
