@@ -2,13 +2,6 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <AssemblyName>Serilog.Sinks.NUnit.Sample.NetCore</AssemblyName>
-    <PackageId>Serilog.Sinks.NUnit.Sample.NetCore</PackageId>
-    <NetStandardImplicitPackageVersion>2.0.1</NetStandardImplicitPackageVersion>
-    <PackageTargetFallback>$(PackageTargetFallback);dnxcore50</PackageTargetFallback>
-    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
-    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
-    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
   </PropertyGroup>
 
   <ItemGroup>

@@ -2,6 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Description>NUnit Serilog sink.</Description>
+    <PackageReleaseNotes>Moved library to .NetStandard library supporting .NetStandard 2.0. Updated logging to output logs progressivelly when running the test instead of outputting all the info after the test is done.</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
