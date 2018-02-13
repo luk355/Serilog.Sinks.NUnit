@@ -1,10 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard1.6</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>Serilog.Sinks.NUnit.Sample.NetCore</AssemblyName>
     <PackageId>Serilog.Sinks.NUnit.Sample.NetCore</PackageId>
-    <NetStandardImplicitPackageVersion>1.6.0</NetStandardImplicitPackageVersion>
+    <NetStandardImplicitPackageVersion>2.0.1</NetStandardImplicitPackageVersion>
     <PackageTargetFallback>$(PackageTargetFallback);dnxcore50</PackageTargetFallback>
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
@@ -12,12 +12,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Serilog.Sinks.NUnit\Serilog.Sinks.NUnit.csproj" />
+    <PackageReference Include="NUnit" Version="3.9.0" />
+    <PackageReference Include="Serilog" Version="2.6.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="NUnit" Version="3.4.1" />
-    <PackageReference Include="Serilog" Version="2.3.0" />
+    <ProjectReference Include="..\..\src\Serilog.Sinks.NUnit\Serilog.Sinks.NUnit.csproj" />
   </ItemGroup>
 
 </Project>

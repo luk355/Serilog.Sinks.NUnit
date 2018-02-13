@@ -16,13 +16,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{18BB7FA4-7
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{4EBD2283-B993-4DB8-8D7B-AA8261164CAB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Serilog.Sinks.NUnit", "src\Serilog.Sinks.NUnit\Serilog.Sinks.NUnit.csproj", "{0479B6F0-6478-42D5-9BCF-D52094FACD33}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Serilog.Sinks.NUnit.Tests", "test\Serilog.Sinks.NUnit.Tests\Serilog.Sinks.NUnit.Tests.csproj", "{9929C5E6-1B30-4E61-8416-1E89F3E54353}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Serilog.Sinks.NUnit.Sample.NetCore", "samples\Serilog.Sinks.NUnit.Sample.NetCore\Serilog.Sinks.NUnit.Sample.NetCore.csproj", "{EB26533C-FCB7-4B4F-8A1F-29784473C614}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Serilog.Sinks.NUnit.Sample", "samples\Serilog.Sinks.NUnit.Sample\Serilog.Sinks.NUnit.Sample.csproj", "{E21F1FC8-981F-44D6-AD7D-A85236CE1D46}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Serilog.Sinks.NUnit", "src\Serilog.Sinks.NUnit\Serilog.Sinks.NUnit.csproj", "{F9760F54-E4C6-4F9F-8CF5-E077BE30DBB5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,10 +30,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0479B6F0-6478-42D5-9BCF-D52094FACD33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0479B6F0-6478-42D5-9BCF-D52094FACD33}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0479B6F0-6478-42D5-9BCF-D52094FACD33}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0479B6F0-6478-42D5-9BCF-D52094FACD33}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9929C5E6-1B30-4E61-8416-1E89F3E54353}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9929C5E6-1B30-4E61-8416-1E89F3E54353}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9929C5E6-1B30-4E61-8416-1E89F3E54353}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -46,15 +42,19 @@ Global
 		{E21F1FC8-981F-44D6-AD7D-A85236CE1D46}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E21F1FC8-981F-44D6-AD7D-A85236CE1D46}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E21F1FC8-981F-44D6-AD7D-A85236CE1D46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9760F54-E4C6-4F9F-8CF5-E077BE30DBB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9760F54-E4C6-4F9F-8CF5-E077BE30DBB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9760F54-E4C6-4F9F-8CF5-E077BE30DBB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9760F54-E4C6-4F9F-8CF5-E077BE30DBB5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{0479B6F0-6478-42D5-9BCF-D52094FACD33} = {4E106ADB-6C85-4003-944E-54908DAB951A}
 		{9929C5E6-1B30-4E61-8416-1E89F3E54353} = {18BB7FA4-728C-48B3-8E16-CEF3BBB706CC}
 		{EB26533C-FCB7-4B4F-8A1F-29784473C614} = {4EBD2283-B993-4DB8-8D7B-AA8261164CAB}
 		{E21F1FC8-981F-44D6-AD7D-A85236CE1D46} = {4EBD2283-B993-4DB8-8D7B-AA8261164CAB}
+		{F9760F54-E4C6-4F9F-8CF5-E077BE30DBB5} = {4E106ADB-6C85-4003-944E-54908DAB951A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AE7B6E2F-C066-41B3-AA51-61D11C2FCE94}
