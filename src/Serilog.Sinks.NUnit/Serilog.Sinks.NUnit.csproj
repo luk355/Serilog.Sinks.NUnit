@@ -1,14 +1,16 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <Description>NUnit Serilog sink.</Description>
-    <PackageReleaseNotes>Moved library to .NetStandard library supporting .NetStandard 2.0. Updated logging to output logs progressivelly when running the test instead of outputting all the info after the test is done.</PackageReleaseNotes>
+	<TargetFrameworks>net461;netstandard1.6</TargetFrameworks>
+	<Description>NUnit Serilog sink.</Description>
+    <PackageReleaseNotes>Updated logging to output logs progressively when running the test instead of outputting all the info after the test is done.</PackageReleaseNotes>
+	<PackageProjectUrl>https://github.com/luk355/Serilog.Sinks.NUnit</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/luk355/Serilog.Sinks.NUnit/blob/master/LICENSE</PackageLicenseUrl>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="NUnit" Version="3.9.0" />
     <PackageReference Include="Serilog" Version="2.6.0" />
+    <PackageReference Include="NUnit" Version="3.9.0" />
   </ItemGroup>
 
 </Project>
