@@ -24,6 +24,16 @@ function Exec
 
 if(Test-Path .\artifacts) { Remove-Item .\artifacts -Force -Recurse }
 
+echo "==========================" 
+echo "environment info" 
+echo "==========================" 
+
+exec { & dotnet --info }
+
+echo "==========================" 
+echo "restoring NuGet packages" 
+echo "==========================" 
+
 exec { & dotnet restore }
 
 # inspired by https://github.com/jbogard/MediatR/blob/master/Build.ps1
