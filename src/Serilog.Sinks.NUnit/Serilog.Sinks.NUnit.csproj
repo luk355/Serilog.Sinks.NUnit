@@ -12,8 +12,8 @@ var log = new LoggerConfiguration().WriteTo.NUnitOutput().CreateLogger();</Descr
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Serilog" Version="2.6.0" />
-    <PackageReference Include="NUnit" Version="3.9.0" />
+    <PackageReference Include="Serilog" Version="2.0.0" />
+	<PackageReference Include="NUnit" Version="3.6.0" />
   </ItemGroup>
 
 </Project>
