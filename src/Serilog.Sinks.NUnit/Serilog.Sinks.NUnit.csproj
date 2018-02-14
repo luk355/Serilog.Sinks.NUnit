@@ -2,7 +2,10 @@
 
   <PropertyGroup>
 	<TargetFrameworks>net461;netstandard1.6</TargetFrameworks>
-	<Description>NUnit Serilog sink.</Description>
+	<Description>NUnit Serilog sink.
+
+Usage:
+var log = new LoggerConfiguration().WriteTo.NUnitOutput().CreateLogger();</Description>
     <PackageReleaseNotes>Updated logging to output logs progressively when running the test instead of outputting all the info after the test is done.</PackageReleaseNotes>
 	<PackageProjectUrl>https://github.com/luk355/Serilog.Sinks.NUnit</PackageProjectUrl>
     <PackageLicenseUrl>https://github.com/luk355/Serilog.Sinks.NUnit/blob/master/LICENSE</PackageLicenseUrl>
