@@ -14,9 +14,9 @@ namespace Serilog.Sinks.NUnit.Sample.NetCore
         }
 
         [Test]
-        public void Test1()
+        public void DotNetCoreSampleTest()
         {
-            Log.Error("Blahblahblah!");
+            Log.Error("Error from .netCore sample project!");
         }
     }
 }

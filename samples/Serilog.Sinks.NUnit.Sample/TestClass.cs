@@ -14,9 +14,9 @@ namespace Serilog.Sinks.NUnit.Sample
         }
 
         [Test]
-        public void Test1()
+        public void DotNetFrameworkSampleTest()
         {
-            Log.Error("Blahblahblah!");
+            Log.Error("Error from .netFramework sample project!");
         }
     }
 }
