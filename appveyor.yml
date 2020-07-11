@@ -22,6 +22,7 @@ deploy:
     branch: master
 - provider: NuGet
   name: production
+  skip_symbols: true
   api_key:
     secure: 2mChWdaPJUedCHnkLnKdr4b3fH9zzQrD7HhIahz9HWcPZUjJquNXPJOxNURPtaDY
   on:
